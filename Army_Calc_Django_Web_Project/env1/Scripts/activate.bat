@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\t_pla\source\repos\Army_Calc_Django_Web_Project\Army_Calc_Django_Web_Project\env
+set VIRTUAL_ENV=C:\Users\Rees-Asus\Source\Repos\t-plasmid\Army_Calc_Django_Web_Project\Army_Calc_Django_Web_Project\env1
 
 if not defined PROMPT set PROMPT=$P$G
 
@@ -16,7 +16,7 @@ if defined _OLD_VIRTUAL_PROMPT set PROMPT=%_OLD_VIRTUAL_PROMPT%
 if defined _OLD_VIRTUAL_PYTHONHOME set PYTHONHOME=%_OLD_VIRTUAL_PYTHONHOME%
 
 set _OLD_VIRTUAL_PROMPT=%PROMPT%
-set PROMPT=(env) %PROMPT%
+set PROMPT=(env1) %PROMPT%
 
 if defined PYTHONHOME set _OLD_VIRTUAL_PYTHONHOME=%PYTHONHOME%
 set PYTHONHOME=
