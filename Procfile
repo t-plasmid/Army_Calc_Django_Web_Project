@@ -1,1 +1,1 @@
-web: gunicorn Army_Calc_Django_Web_Project.Army_Calc_Django_Web_Project.wsgi
+web: gunicorn army_calc_django_web_project.army_calc_django_web_project.wsgi
