@@ -3,7 +3,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Name>Army_Calc_Django_Web_Project</Name>
     <RootNamespace>Army_Calc_Django_Web_Project</RootNamespace>
-    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env1|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -30,23 +30,151 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="accounts\admin.py" />
+    <Compile Include="accounts\apps.py" />
+    <Compile Include="accounts\forms.py" />
+    <Compile Include="accounts\migrations\0001_initial.py" />
+    <Compile Include="accounts\migrations\__init__.py" />
+    <Compile Include="accounts\models.py" />
+    <Compile Include="accounts\tests.py" />
+    <Compile Include="accounts\urls.py" />
+    <Compile Include="accounts\views.py" />
+    <Compile Include="accounts\__init__.py" />
+    <Compile Include="Army_Calc_Django_Web_Project\views.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="manage.py" />
     <Compile Include="Army_Calc_Django_Web_Project\__init__.py" />
     <Compile Include="Army_Calc_Django_Web_Project\settings.py" />
     <Compile Include="Army_Calc_Django_Web_Project\urls.py" />
     <Compile Include="Army_Calc_Django_Web_Project\wsgi.py" />
+    <Compile Include="movement\admin.py" />
+    <Compile Include="movement\apps.py" />
+    <Compile Include="movement\forms.py" />
+    <Compile Include="movement\migrations\0001_initial.py" />
+    <Compile Include="movement\migrations\0002_auto_20211223_1042.py" />
+    <Compile Include="movement\migrations\0003_auto_20211223_1551.py" />
+    <Compile Include="movement\migrations\0004_auto_20211224_1018.py" />
+    <Compile Include="movement\migrations\0005_route_type_acronym.py" />
+    <Compile Include="movement\migrations\0006_movement_data_speed.py" />
+    <Compile Include="movement\migrations\0007_auto_20211227_2158.py" />
+    <Compile Include="movement\migrations\0008_auto_20211227_2259.py" />
+    <Compile Include="movement\migrations\0009_auto_20211227_2304.py" />
+    <Compile Include="movement\migrations\0010_auto_20211230_1313.py" />
+    <Compile Include="movement\migrations\__init__.py" />
+    <Compile Include="movement\models.py" />
+    <Compile Include="movement\tests.py" />
+    <Compile Include="movement\urls.py" />
+    <Compile Include="movement\views.py" />
+    <Compile Include="movement\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="accounts\migrations\__pycache__\0001_initial.cpython-39.pyc" />
+    <Content Include="accounts\migrations\__pycache__\__init__.cpython-39.pyc" />
+    <Content Include="accounts\templates\accounts\login.html" />
+    <Content Include="accounts\templates\accounts\login_default.html" />
+    <Content Include="accounts\templates\accounts\signup.html" />
+    <Content Include="accounts\__pycache__\admin.cpython-39.pyc" />
+    <Content Include="accounts\__pycache__\apps.cpython-39.pyc" />
+    <Content Include="accounts\__pycache__\forms.cpython-39.pyc" />
+    <Content Include="accounts\__pycache__\models.cpython-39.pyc" />
+    <Content Include="accounts\__pycache__\urls.cpython-39.pyc" />
+    <Content Include="accounts\__pycache__\views.cpython-39.pyc" />
+    <Content Include="accounts\__pycache__\__init__.cpython-39.pyc" />
+    <Content Include="movement\migrations\__pycache__\0001_initial.cpython-39.pyc" />
+    <Content Include="movement\migrations\__pycache__\0002_auto_20211223_1042.cpython-39.pyc" />
+    <Content Include="movement\migrations\__pycache__\0003_auto_20211223_1551.cpython-39.pyc" />
+    <Content Include="movement\migrations\__pycache__\0004_auto_20211224_1018.cpython-39.pyc" />
+    <Content Include="movement\migrations\__pycache__\0005_route_type_acronym.cpython-39.pyc" />
+    <Content Include="movement\migrations\__pycache__\0006_movement_data_speed.cpython-39.pyc" />
+    <Content Include="movement\migrations\__pycache__\0007_auto_20211227_2158.cpython-39.pyc" />
+    <Content Include="movement\migrations\__pycache__\0008_auto_20211227_2259.cpython-39.pyc" />
+    <Content Include="movement\migrations\__pycache__\0009_auto_20211227_2304.cpython-39.pyc" />
+    <Content Include="movement\migrations\__pycache__\0010_auto_20211230_1313.cpython-39.pyc" />
+    <Content Include="movement\migrations\__pycache__\__init__.cpython-39.pyc" />
+    <Content Include="movement\templates\movement\confirm_delete_brigade.html" />
+    <Content Include="movement\templates\movement\confirm_delete_cp_detail.html" />
+    <Content Include="movement\templates\movement\confirm_delete_movement_plan.html" />
+    <Content Include="movement\templates\movement\confirm_delete_packet_detail.html" />
+    <Content Include="movement\templates\movement\confirm_delete_unit.html" />
+    <Content Include="movement\templates\movement\confirm_delete_unit_detail.html" />
+    <Content Include="movement\templates\movement\create_brigade.html" />
+    <Content Include="movement\templates\movement\create_cp_detail.html" />
+    <Content Include="movement\templates\movement\create_movement_plan.html" />
+    <Content Include="movement\templates\movement\create_packet_detail.html" />
+    <Content Include="movement\templates\movement\create_unit.html" />
+    <Content Include="movement\templates\movement\create_unit_detail.html" />
+    <Content Include="movement\templates\movement\edit_brigade_list.html" />
+    <Content Include="movement\templates\movement\edit_cp_detail_list.html" />
+    <Content Include="movement\templates\movement\edit_movement_plan_list.html" />
+    <Content Include="movement\templates\movement\edit_packet_detail_list.html" />
+    <Content Include="movement\templates\movement\edit_unit_detail_list.html" />
+    <Content Include="movement\templates\movement\edit_unit_list.html" />
+    <Content Include="movement\templates\movement\movement_base.html" />
+    <Content Include="movement\templates\movement\movement_detail.html" />
+    <Content Include="movement\templates\movement\movement_list.html" />
+    <Content Include="movement\templates\movement\unit_detail.html" />
+    <Content Include="movement\templates\movement\update_brigade.html" />
+    <Content Include="movement\templates\movement\update_cp_detail.html" />
+    <Content Include="movement\templates\movement\update_movement_plan.html" />
+    <Content Include="movement\templates\movement\update_packet_detail.html" />
+    <Content Include="movement\templates\movement\update_unit.html" />
+    <Content Include="movement\templates\movement\update_unit_detail.html" />
+    <Content Include="movement\__pycache__\admin.cpython-39.pyc" />
+    <Content Include="movement\__pycache__\apps.cpython-39.pyc" />
+    <Content Include="movement\__pycache__\forms.cpython-39.pyc" />
+    <Content Include="movement\__pycache__\models.cpython-39.pyc" />
+    <Content Include="movement\__pycache__\urls.cpython-39.pyc" />
+    <Content Include="movement\__pycache__\views.cpython-39.pyc" />
+    <Content Include="movement\__pycache__\__init__.cpython-39.pyc" />
     <Content Include="requirements.txt" />
+    <Content Include="requirements_bak.txt" />
+    <Content Include="static\army_calculator\content\css\master.css" />
+    <Content Include="static\army_calculator\content\image\army-img.png" />
+    <Content Include="static\army_calculator\content\image\army_img_sm.png" />
+    <Content Include="static\army_calculator\content\image\Mov_Create.png" />
+    <Content Include="static\army_calculator\content\image\Mov_edit.png" />
+    <Content Include="static\army_calculator\content\image\Mov_View.png" />
+    <Content Include="static\army_calculator\scripts\master.js" />
+    <Content Include="static\content\master.css" />
+    <Content Include="templates\about.html" />
+    <Content Include="templates\admin\base_site.html" />
+    <Content Include="templates\contact.html" />
+    <Content Include="templates\index.html" />
+    <Content Include="templates\layout.html" />
+    <Content Include="templates\loginsuccess.html" />
+    <Content Include="templates\thanks.html" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="accounts\" />
+    <Folder Include="accounts\migrations\" />
+    <Folder Include="accounts\migrations\__pycache__\" />
+    <Folder Include="accounts\templates\" />
+    <Folder Include="accounts\templates\accounts\" />
+    <Folder Include="accounts\__pycache__\" />
     <Folder Include="Army_Calc_Django_Web_Project\" />
+    <Folder Include="movement\" />
+    <Folder Include="movement\migrations\" />
+    <Folder Include="movement\migrations\__pycache__\" />
+    <Folder Include="movement\templates\" />
+    <Folder Include="movement\templates\movement\" />
+    <Folder Include="movement\__pycache__\" />
+    <Folder Include="static\" />
+    <Folder Include="static\army_calculator\" />
+    <Folder Include="static\army_calculator\content\" />
+    <Folder Include="static\army_calculator\content\css\" />
+    <Folder Include="static\army_calculator\content\image\" />
+    <Folder Include="static\army_calculator\fonts\" />
+    <Folder Include="static\army_calculator\scripts\" />
+    <Folder Include="static\content\" />
+    <Folder Include="templates\" />
+    <Folder Include="templates\admin\" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="env\">
-      <Id>env</Id>
+    <Interpreter Include="env1\">
+      <Id>env1</Id>
       <Version>3.9</Version>
-      <Description>env (Python 3.9 (64-bit))</Description>
+      <Description>env1 (Python 3.9 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
